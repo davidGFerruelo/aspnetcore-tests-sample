@@ -32,3 +32,8 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: UseDotNet@2
+  displayName: 'Use latest preview of .Net Core sdk 3.x'
+  inputs:
+    version: 3.x
+    includePreviewVersions: true
