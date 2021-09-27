@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'C:\Users\david.gferruelo\Downloads\aspnetcore-tests-sample-master - Copy\aspnetcore-tests-sample-master\SampleAppWithTests.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -35,13 +35,13 @@ steps:
   displayName: 'Build solution'
   inputs:
     command: 'build'
-    projects: '**/*.sln'
+    projects: 'C:\Users\david.gferruelo\Downloads\aspnetcore-tests-sample-master - Copy\aspnetcore-tests-sample-master\SampleAppWithTests.sln'
 
 - task: DotNetCoreCLI@2
   displayName: 'Execute Unit tests'
   inputs:
     command: 'test'
-    projects: '**/*.csproj'
+    projects: 'C:\Users\david.gferruelo\Downloads\aspnetcore-tests-sample-master - Copy\aspnetcore-tests-sample-master\test\AcceptanceTests\AcceptanceTests.csproj'
     arguments: '--collect "Code Coverage"'
 
 - task: SonarCloudAnalyze@1
