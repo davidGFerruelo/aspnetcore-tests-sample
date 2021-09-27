@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"davidGFerruelo_aspnetcore-tests-sample" /o:"davidgferruelo" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          .\.C:\Users\david.gferruelo\Downloads\aspnetcore-tests-sample-master\aspnetcore-tests-sample-master\src\SampleApp\bin\Debug\netcoreapp2.2\SampleApp.dll
+          .\".C:\Users\david.gferruelo\Downloads\aspnetcore-tests-sample-master\aspnetcore-tests-sample-master\src\SampleApp\bin\Debug\netcoreapp2.2\SampleApp.dll"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
